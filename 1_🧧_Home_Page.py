@@ -4,7 +4,7 @@ import PIL
 import pandas as pd
 import numpy as np
 
-logo = PIL.Image.open("images/cyber-48.png")
+logo = PIL.Image.open("img/cyber-security-48.png")
 data = pd.read_csv("cyber-operations-incidents.csv")
 date = data['Date']
 date.dropna(axis=0, inplace=True)
@@ -27,14 +27,14 @@ with st.sidebar:
 with st.container():
     processor, nevtik_text, nevtik = st.columns([1,3,1])
 
-    processor.image("images/processor-64.png", width=64)
-    nevtik.image("images/logo-nevtik.png", width=70)
+    processor.image("img/processor-64.png", width=64)
+    nevtik.image("img/logo-nevtik.png", width=70)
 
     nevtik_text.markdown("""
     <div class="header-logo" style="display: flex; justify-content:space-around; align-items:center;">
-            <img src="./images/processor-64.png" alt="">
+            <img src="./img/processor-64.png" alt="">
             <h3><span style="color: red;">NEV</span>-<span>TIK</span></h3>
-            <img src="./images/logo-nevtik.png" alt="">
+            <img src="./img/logo-nevtik.png" alt="">
     </div>
     """,unsafe_allow_html=True)
 
@@ -44,7 +44,7 @@ with st.container():
         <br><br>
     """, unsafe_allow_html=True)
 
-    st.image("images/sunset-nature-landscape.jpg")
+    st.image("img/sunset-nature-landscape.jpg")
 
 
     date = pd.DatetimeIndex(date).year
@@ -62,7 +62,7 @@ with st.container():
     phising_text, phising_img = st.columns(2)
 
     with phising_img:
-        st.image("images/phising.jpg", caption="Phising Attactk", use_column_width=True)
+        st.image("img/phising.jpg", caption="Phising Attactk", use_column_width=True)
         
 
     with phising_text:
@@ -75,7 +75,7 @@ with st.container():
 
 
     with carding_img:
-        st.image("images/carding.jpg",  caption="Carding Attactk", use_column_width=True)
+        st.image("img/carding.jpg",  caption="Carding Attactk", use_column_width=True)
 
     with carding_text:
         st.markdown(f"""
@@ -91,15 +91,15 @@ with st.container():
 
     with hacker1:
         st.write("### Hacker 1")
-        st.image("images/hacker-1.jpg", width=200, caption='First Hacker')
+        st.image("img/hacker-1.jpg", width=200, caption='First Hacker')
 
     with hacker2:
         st.write("### Hacker 2")
-        st.image("images/hacker-2.jpg", width=200, caption='Second Hacker')
+        st.image("img/hacker-2.jpg", width=200, caption='Second Hacker')
 
     with hacker3:
         st.write("### Hacker 3")
-        st.image("images/hacker-nuclear.jpg", width=200, caption='Third Hacker')
+        st.image("img/hacker-nuclear.jpg", width=200, caption='Third Hacker')
 
     with text_hacker1:
         st.markdown("lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem, quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem, quisquam.")
@@ -115,7 +115,7 @@ st.video("https://youtu.be/jxTxGlE9X5s")
 # ! EXPANDER ##############################################################################################################
 with st.container():
     with st.expander("How to Surfing on Internet safely?"):
-        st.image('images/server-48.png')
+        st.image('img/server-48.png')
         st.markdown("""
         1. Use strong passwords. ...
         2. Be careful with phishing emails. ...
@@ -128,11 +128,11 @@ with st.container():
 
 
     with st.expander("Is it easy to be craced by Hacker?"):
-        st.image('images/nas-48.png')
+        st.image('img/nas-48.png')
         st.write("They have advanced knowledge of programming languages and computer OS. Hackers are very skilled and intelligent people. These people may be skilled. But most of the time, they don't even need extensive skills. Some crackers only have a knowledge of a few illegal tricks that help them in stealing data.")
 
     with st.expander("How can my Data be stolen?"):
-        st.image('images/c-drive-48.png')
+        st.image('img/c-drive-48.png')
         st.write("Many online services require users to fill in personal details such as full name, home address and credit card number. Criminals steal this data from online accounts to commit identity theft, such as using the victim's credit card or taking loans in their name.")
 
 st.markdown("\n\n\n\n")

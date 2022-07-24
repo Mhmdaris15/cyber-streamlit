@@ -1,17 +1,20 @@
-from turtle import width
 import streamlit as st
+import PIL
+
+logo = PIL.Image.open("img/wordpress-48.png")
+st.set_page_config(page_title="Blogs Page | Cybersecurity", page_icon=logo)
 
 with st.container():
     processor, nevtik_text, nevtik = st.columns([1,3,1])
 
-    processor.image("images/processor-64.png", width=64)
-    nevtik.image("images/logo-nevtik.png", width=70)
+    processor.image("img/processor-64.png", width=64)
+    nevtik.image("img/logo-nevtik.png", width=70)
 
     nevtik_text.markdown("""
     <div class="header-logo" style="display: flex; justify-content:space-around; align-items:center;">
-            <img src="./images/processor-64.png" alt="">
+            <img src="./img/processor-64.png" alt="">
             <h3><span style="color: red;">NEV</span>-<span>TIK</span></h3>
-            <img src="./images/logo-nevtik.png" alt="">
+            <img src="./img/logo-nevtik.png" alt="">
     </div>
     """,unsafe_allow_html=True)
 
@@ -21,7 +24,7 @@ with st.container():
         <br><br>
     """, unsafe_allow_html=True)
 
-    st.image("images/neon-cybersecurity.jpg")
+    st.image("img/neon-cybersecurity.jpg")
 
 blog1, blog2, blog3 = st.tabs(["What is Phising Attack really means? ", "How Dangerous DDoS attacks are?", "What is Carding?"])
 
@@ -32,7 +35,7 @@ with blog1:
         <br><br>
     """, unsafe_allow_html=True)
 
-    st.image("images/phising.jpg")
+    st.image("img/phising.jpg")
 
     st.markdown("""
     ### What is Phising?
@@ -59,7 +62,7 @@ with blog2:
         <br><br>
     """, unsafe_allow_html=True)
 
-    st.image("images/ddos-attack.jpg")
+    st.image("img/ddos-attack.jpg")
 
     st.markdown("""
     ## What is a DDoS Attack? - DDoS Meaning
@@ -85,7 +88,7 @@ with blog3:
         <br><br>
     """, unsafe_allow_html=True)
 
-    st.image("images/hacker-nuclear.jpg")
+    st.image("img/hacker-nuclear.jpg")
 
     st.markdown("""
     ## What is a DDoS Attack? - DDoS Meaning
