@@ -25,16 +25,16 @@ with st.sidebar:
     
 
 with st.container():
-    processor, nevtik_text, nevtik = st.columns([1,3,1])
+    processor, title_text, artificial = st.columns([1,3,1])
 
     processor.image("img/processor-64.png", width=64)
-    nevtik.image("img/logo-nevtik.png", width=70)
+    artificial.image("img/artificial-64.png", width=70)
 
-    nevtik_text.markdown("""
+    title_text.markdown("""
     <div class="header-logo" style="display: flex; justify-content:space-around; align-items:center;">
             <img src="./img/processor-64.png" alt="">
-            <h3><span style="color: red;">NEV</span>-<span>TIK</span></h3>
-            <img src="./img/logo-nevtik.png" alt="">
+            <h3><span style="color: red;">Cyber</span>-<span>Security</span></h3>
+            <img src="./img/artificial-64.png" alt="">
     </div>
     """,unsafe_allow_html=True)
 
@@ -67,7 +67,7 @@ with st.container():
 
     with phising_text:
         st.markdown(f"""
-            <div class="phising-text" style="text-align:center; margin-top:20%;">Phishing is a type of social engineering where an attacker sends a fraudulent message designed to trick a person into revealing sensitive information to the attacker or to deploy malicious software on the victim's infrastructure like ransomware.</div>
+            <div class="phising-text" style="text-align:center; margin-top:20%;">Phishing is happened where an attacker sends a fraudulent message designed to trick a person into revealing sensitive information to the attacker or to deploy malicious software on the victim's infrastructure like ransomware.</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -91,24 +91,24 @@ with st.container():
 
     with hacker1:
         st.write("### Hacker 1")
-        st.image("img/hacker-1.jpg", width=200, caption='First Hacker')
+        st.image("img/hacker-1.jpg", width=200, caption='Code injection')
 
     with hacker2:
         st.write("### Hacker 2")
-        st.image("img/hacker-2.jpg", width=200, caption='Second Hacker')
+        st.image("img/hacker-2.jpg", width=200, caption='Server-side request forgery')
 
     with hacker3:
         st.write("### Hacker 3")
-        st.image("img/hacker-nuclear.jpg", width=200, caption='Third Hacker')
+        st.image("img/hacker-nuclear.jpg", width=200, caption='Prototype pollution')
 
     with text_hacker1:
-        st.markdown("lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem, quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem, quisquam.")
+        st.markdown("Code injection is a type of attack that allows an attacker to inject malicious code into an application through a user input field, which is then executed on the fly. Code injection vulnerabilities are rather rare, but when they do pop up, it is often a case where the developer has attempted to generate code dynamically. Preventing code injection attacks usually comes down to reconsidering the need to dynamically execute code, especially where user input is involved.")
 
     with text_hacker2:
-        st.markdown("lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem, quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem, quisquam.")
+        st.markdown("Server-Side Request Forgery (SSRF) is a type of attack that allows an adversary to make arbitrary outbound requests from a server. In some cases, an attacker can use SSRF to pivot throughout corporate networks, exploit otherwise unreachable internal systems, or query metadata endpoints to extract secrets. The severity of SSRF can vary from informational to critical depending on some factors. the visibility of the response and the nature of assets that can be reached will help determine the severity of a given SSRF defect.")
 
     with text_hacker3:
-        st.markdown("lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem, quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem, quisquam.")
+        st.markdown("Prototype pollution is an injection attack that targets JavaScript runtimes. With prototype pollution, an attacker might control the default values of an object's properties. This allows the attacker to tamper with the logic of the application and can also lead to denial of service or, in extreme cases, remote code execution.")
 
 st.video("https://youtu.be/jxTxGlE9X5s")
 
